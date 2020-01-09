@@ -21,3 +21,8 @@ cp $CONDA_BUILD_DIR/$PACKAGE_NAME-$VERSION_NUMBER.$BUILD_NUMBER* $CONDA_REPO_DIR
 
 # Perform conda index to update repo metadata
 conda index $CONDA_REPO_DIR
+
+# Push build number back to git
+git add .
+git commit -m "Build package -> increment build number"
+git push origin master
