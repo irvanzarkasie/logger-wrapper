@@ -11,7 +11,7 @@ VERSION_NUMBER = subprocess.run(["cat", VERSION_NUMBER], capture_output=True, te
 PACKAGE_NAME = subprocess.run(["cat", PACKAGE_NAME], capture_output=True, text=True).stdout.split("\n")[0]
 
 setuptools.setup(
-    name="logger-wrapper",
+    name=PACKAGE_NAME,
     version=VERSION_NUMBER + "." + BUILD_NUMBER,
     author="expecc",
     author_email="expecc@expecc.com",
